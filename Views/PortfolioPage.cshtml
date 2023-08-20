@@ -1,0 +1,26 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.PortfolioPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout";
+}
+
+<main id="portfolio-page">
+@if (!string.IsNullOrWhiteSpace(Model.Header)){
+		<h1 class="header">@Model.Header</h1>
+}
+
+{
+	@foreach (ProjectPage item in Model.Children<ProjectPage>()
+		.Where(x => x.Date != DateTime.MinValue && x.Date < DateTime.Now)
+		.OrderBy(x => x.Date))
+	{
+		<li class="porfolio-project-blocks">
+			<h4>@item.Name</h4>
+			<p><span>@item.Date.ToString("yyyy-MM-dd")</span></p>
+			<p><a href="@item.Url()">See it here</a></p>
+		</li>
+	}
+}
+
+</main>

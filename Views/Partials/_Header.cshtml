@@ -1,0 +1,22 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    Layout = null;
+    var root = Model.AncestorOrSelf(1);
+}
+
+<nav>
+    <ul class="main-nav">
+        <li><a href="@root.Url()" class="body">Start</a></li>
+        <li class="header">
+            @if (root.Children.Any())
+            {
+                foreach (var item in root.Children())
+                {
+                    <li>
+                        <a href="@item.Url()">@item.Name</a>
+                    </li>
+                }
+            }
+        </li>
+    </ul>
+</nav>

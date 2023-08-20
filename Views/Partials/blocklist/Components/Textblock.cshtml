@@ -1,0 +1,22 @@
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>; 
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Textblock)Model.Content;
+}
+
+@if (!string.IsNullOrWhiteSpace(content.Header))
+{
+    <h1>@content.Header</h1>
+}
+@if (!string.IsNullOrWhiteSpace(content.Body.ToString()))
+{
+    <p>@content.Body</p>
+}
+@{
+    var link = content.Link;
+    if (link != null)
+    {
+        <li><a href="@link.Url" target="@link.Target">@link.Name</a></li>
+    }
+
+}

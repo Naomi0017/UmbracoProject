@@ -1,0 +1,29 @@
+{
+  "Name": "StartPage - Block List",
+  "Alias": "",
+  "EditorAlias": "Umbraco.BlockList",
+  "DatabaseType": 0,
+  "Configuration": {
+    "blocks": [
+      {
+        "contentElementTypeKey": "ea56d2d4-3305-493e-87e0-cb4484b68bc6",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      },
+      {
+        "contentElementTypeKey": "921b83f9-bf65-4df4-8f30-50b682c5c86a",
+        "editorSize": "medium",
+        "forceHideContentEditorInOverlay": false
+      }
+    ],
+    "validationLimit": {},
+    "useSingleBlockMode": false,
+    "useLiveEditing": false,
+    "useInlineEditingAsDefault": false
+  },
+  "Parent": null,
+  "Udi": "umb://data-type/2c6ef753969946c69a9fc4167b5d5178",
+  "Dependencies": [],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.DataTypeArtifact",
+  "__version": "12.0.1"
+}

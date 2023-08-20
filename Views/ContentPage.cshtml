@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ContentPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout";
+}
+
+<main class="content-page">
+	@if (!string.IsNullOrWhiteSpace(Model.Header)){
+			<h1>@Model.Header</h1>
+	}
+	@if (!string.IsNullOrWhiteSpace(Model.Body.ToString())){
+			<p>@Model.Body</p>
+	}
+</main>

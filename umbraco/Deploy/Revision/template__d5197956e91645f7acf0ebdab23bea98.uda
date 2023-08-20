@@ -1,0 +1,16 @@
+{
+  "Name": "PortfolioPage",
+  "Alias": "PortfolioPage",
+  "File": "umb://template-file/PortfolioPage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/d5197956e91645f7acf0ebdab23bea98",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/PortfolioPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "12.0.1"
+}

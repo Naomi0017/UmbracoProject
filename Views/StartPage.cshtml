@@ -2,22 +2,24 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.StartPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+	Layout = "_Layout";
 }
 
-<main class="project-page">
-@if (!string.IsNullOrWhiteSpace(Model.Header)){
-		<h1>@Model.Header</h1>
-}
-@if (Model.Image != null) {
-		<img src="@Model.Image.Url()" alt="@Model.Image.Name" class="project-image">
-}
-@if (!string.IsNullOrWhiteSpace(Model.Body.ToString())){
-		<div class="project-body">
+<!DOCTYPE html>
+<html lang="en">
+	<head></head>
+
+	<body id="start-page">
+		@if (!string.IsNullOrWhiteSpace(Model.Header)){
+			<h1>@Model.Header</h1>
+		}
+		@if (!string.IsNullOrWhiteSpace(Model.Body.ToString())){
 			<p>@Model.Body</p>
-		</div>
-}
-</main>
+		}
+		@if (Model.Image != null) {
+			<img src="@Model.Image.Url()" alt="@Model.Image.Name" class="project-image">
+		}
+		<div id="blocklist">@Html.GetBlockListHtml(Model.Blocklist)</div>
 
-
-
+	</body>
+</html>

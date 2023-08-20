@@ -1,0 +1,69 @@
+{
+  "Name": "Imageblock",
+  "Alias": "imageblock",
+  "DefaultTemplate": null,
+  "AllowedTemplates": [],
+  "HistoryCleanup": {
+    "preventCleanup": false,
+    "keepAllVersionsNewerThanDays": null,
+    "keepLatestVersionPerDayForDays": null
+  },
+  "Icon": "icon-birthday-cake color-black",
+  "Thumbnail": "folder.png",
+  "Description": null,
+  "IsContainer": false,
+  "Permissions": {
+    "AllowVaryingByCulture": false,
+    "AllowVaryingBySegment": false,
+    "AllowedAtRoot": false,
+    "IsElementType": true,
+    "AllowedChildContentTypes": []
+  },
+  "Parent": "umb://document-type-container/aad811f28d6247049e5a8f844fab0253",
+  "CompositionContentTypes": [],
+  "PropertyGroups": [
+    {
+      "Key": "7e43286f-52bc-418b-a12c-033b1d9d1059",
+      "Name": "FirstSection",
+      "SortOrder": 0,
+      "Type": 0,
+      "Alias": "firstSection",
+      "PropertyTypes": [
+        {
+          "Key": "8cf47fb6-44c0-4ff3-aa2b-56383ffc1981",
+          "Alias": "image",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Description": null,
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Image",
+          "SortOrder": 0,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        }
+      ]
+    }
+  ],
+  "PropertyTypes": [],
+  "Udi": "umb://document-type/921b83f9bf654df48f3050b682c5c86a",
+  "Dependencies": [
+    {
+      "Udi": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
+      "Udi": "umb://document-type-container/aad811f28d6247049e5a8f844fab0253",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.ContentType.DocumentTypeArtifact",
+  "__version": "12.0.1"
+}

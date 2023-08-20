@@ -1,0 +1,23 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.ProjectPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "_Layout";
+}
+
+<main class="project-page">
+@if (!string.IsNullOrWhiteSpace(Model.Header)){
+		<h1>@Model.Header</h1>
+}
+@if (Model.Image != null) {
+		<img src="@Model.Image.Url()" alt="@Model.Image.Name" class="project-image">
+}
+@if (!string.IsNullOrWhiteSpace(Model.Body.ToString())){
+		<div class="project-body">
+			<p>@Model.Body</p>
+		</div>
+}
+@if (Model.Date != DateTime.MinValue){
+	<p>@(Model.Date.ToString("yyyy-MM-dd"))</p>
+}
+</main>

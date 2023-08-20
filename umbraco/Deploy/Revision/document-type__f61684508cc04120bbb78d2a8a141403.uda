@@ -1,44 +1,77 @@
 {
-  "Name": "StartPage",
-  "Alias": "startPage",
-  "DefaultTemplate": "umb://template/dd051f5efba0488b9a9c4a6a97a3ef27",
+  "Name": "ProjectPage",
+  "Alias": "projectPage",
+  "DefaultTemplate": "umb://template/15e79dda94f040fa91785be7fdb55361",
   "AllowedTemplates": [
-    "umb://template/dd051f5efba0488b9a9c4a6a97a3ef27"
+    "umb://template/15e79dda94f040fa91785be7fdb55361"
   ],
   "HistoryCleanup": {
     "preventCleanup": false,
     "keepAllVersionsNewerThanDays": null,
     "keepLatestVersionPerDayForDays": null
   },
-  "Icon": "icon-home color-black",
+  "Icon": "icon-autofill color-black",
   "Thumbnail": "folder.png",
   "Description": null,
   "IsContainer": false,
   "Permissions": {
     "AllowVaryingByCulture": false,
     "AllowVaryingBySegment": false,
-    "AllowedAtRoot": true,
+    "AllowedAtRoot": false,
     "IsElementType": false,
-    "AllowedChildContentTypes": [
-      "umb://document-type/4e223122622c4121abe65d39dea51060",
-      "umb://document-type/fd8f70e3c7bd47388e9cfb74bb0b10b8"
-    ]
+    "AllowedChildContentTypes": []
   },
   "Parent": null,
   "CompositionContentTypes": [],
   "PropertyGroups": [
     {
-      "Key": "372c9db3-d64e-4f13-aae9-05a9f1661b83",
+      "Key": "c3c2d1ee-ec5a-4c9d-8165-d059ab0c7742",
       "Name": "FirstSection",
       "SortOrder": 0,
       "Type": 0,
       "Alias": "firstSection",
       "PropertyTypes": [
         {
-          "Key": "3f09d508-d12f-4315-a0c0-c5ebd54598be",
+          "Key": "26438732-b052-41db-98f5-3d208715f751",
+          "Alias": "image",
+          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
+          "Description": null,
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Image",
+          "SortOrder": 1,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "7c33ac6d-5213-417e-a485-62256120b776",
+          "Alias": "date",
+          "DataType": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+          "Description": null,
+          "Mandatory": false,
+          "MandatoryMessage": null,
+          "Name": "Date",
+          "SortOrder": 3,
+          "Validation": null,
+          "ValidationMessage": null,
+          "VariesByCulture": false,
+          "VariesBySegment": false,
+          "LabelOnTop": false,
+          "MemberCanEdit": false,
+          "ViewOnProfile": false,
+          "IsSensitive": false
+        },
+        {
+          "Key": "9f076bd7-d297-4dd8-ba3b-70d218314d7f",
           "Alias": "header",
           "DataType": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-          "Description": "",
+          "Description": null,
           "Mandatory": false,
           "MandatoryMessage": null,
           "Name": "Header",
@@ -53,49 +86,13 @@
           "IsSensitive": false
         },
         {
-          "Key": "8ae000e0-607c-4125-bac9-dc03382645e5",
+          "Key": "dace30a5-9366-4897-ad7b-a955ac325375",
           "Alias": "body",
           "DataType": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
-          "Description": "",
+          "Description": null,
           "Mandatory": false,
           "MandatoryMessage": null,
           "Name": "Body",
-          "SortOrder": 1,
-          "Validation": null,
-          "ValidationMessage": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false,
-          "LabelOnTop": false,
-          "MemberCanEdit": false,
-          "ViewOnProfile": false,
-          "IsSensitive": false
-        },
-        {
-          "Key": "ac2eb700-b777-44f6-8506-c00636788c5c",
-          "Alias": "blocklist",
-          "DataType": "umb://data-type/2c6ef753969946c69a9fc4167b5d5178",
-          "Description": null,
-          "Mandatory": false,
-          "MandatoryMessage": null,
-          "Name": "Blocklist",
-          "SortOrder": 3,
-          "Validation": null,
-          "ValidationMessage": null,
-          "VariesByCulture": false,
-          "VariesBySegment": false,
-          "LabelOnTop": false,
-          "MemberCanEdit": false,
-          "ViewOnProfile": false,
-          "IsSensitive": false
-        },
-        {
-          "Key": "f703fe5b-5e37-4ddb-bc57-0b79cfd0a165",
-          "Alias": "image",
-          "DataType": "umb://data-type/4309a3ea0d784329a06cc80b036af19a",
-          "Description": null,
-          "Mandatory": false,
-          "MandatoryMessage": null,
-          "Name": "Image",
           "SortOrder": 2,
           "Validation": null,
           "ValidationMessage": null,
@@ -110,15 +107,10 @@
     }
   ],
   "PropertyTypes": [],
-  "Udi": "umb://document-type/97c63724210e424684a195c9f52a5ad3",
+  "Udi": "umb://document-type/f61684508cc04120bbb78d2a8a141403",
   "Dependencies": [
     {
       "Udi": "umb://data-type/0cc0eba1996042c9bf9b60e150b429ae",
-      "Ordering": true,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://data-type/2c6ef753969946c69a9fc4167b5d5178",
       "Ordering": true,
       "Mode": 0
     },
@@ -128,22 +120,17 @@
       "Mode": 0
     },
     {
+      "Udi": "umb://data-type/5046194e4237453ca54715db3a07c4e1",
+      "Ordering": true,
+      "Mode": 0
+    },
+    {
       "Udi": "umb://data-type/ca90c9500aff4e72b976a30b1ac57dad",
       "Ordering": true,
       "Mode": 0
     },
     {
-      "Udi": "umb://document-type/4e223122622c4121abe65d39dea51060",
-      "Ordering": false,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://document-type/fd8f70e3c7bd47388e9cfb74bb0b10b8",
-      "Ordering": false,
-      "Mode": 0
-    },
-    {
-      "Udi": "umb://template/dd051f5efba0488b9a9c4a6a97a3ef27",
+      "Udi": "umb://template/15e79dda94f040fa91785be7fdb55361",
       "Ordering": true,
       "Mode": 0
     }
