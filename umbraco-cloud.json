@@ -1,0 +1,27 @@
+{
+  "Deploy": {
+    "Project": {
+      "Name": "naomis independent duckling",
+      "Alias": "naomis-independent-duckling",
+      "Id": "ecbc5ce5-64cc-4810-8874-1500d9471991",
+      "TrialExpireDate": "2023-09-01T08:03:19.0000000",
+      "Workspaces": [
+        {
+          "Id": "e3a55851-361a-4d53-aef3-f7aa2a74b08a",
+          "Name": "Live",
+          "Type": "live",
+          "Url": "https://naomis-independent-duckling.euwest01.umbraco.io"
+        }
+      ]
+    },
+    "Settings": {
+      "ApiKey": "CFB0EE1964D0D574B22B70CA3E897B0160B43961"
+    }
+  },
+  "Identity": {
+    "ClientId": "0297c0f6-83ad-4481-9ae2-07a3f5475333",
+    "ClientSecret": "Q5~T526ixOHlj47lg7Mu7_.zN1fK.7ua.9",
+    "EnvironmentId": "e3a55851-361a-4d53-aef3-f7aa2a74b08a",
+    "LocalLoginRedirectUri": "https://redirect.identity.umbraco.com"
+  }
+}

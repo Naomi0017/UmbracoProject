@@ -1,0 +1,16 @@
+{
+  "Name": "StartPage",
+  "Alias": "StartPage",
+  "File": "umb://template-file/StartPage.cshtml",
+  "Master": null,
+  "Udi": "umb://template/dd051f5efba0488b9a9c4a6a97a3ef27",
+  "Dependencies": [
+    {
+      "Udi": "umb://template-file/StartPage.cshtml",
+      "Ordering": true,
+      "Mode": 0
+    }
+  ],
+  "__type": "Umbraco.Deploy.Infrastructure,Umbraco.Deploy.Infrastructure.Artifacts.TemplateArtifact",
+  "__version": "12.0.1"
+}

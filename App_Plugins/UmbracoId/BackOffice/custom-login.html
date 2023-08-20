@@ -1,0 +1,63 @@
+<div ng-controller="Umbraco.Cloud.Identity.CustomLoginController as vm">
+    <div ng-if="vm.state === 'backoffice' && vm.isLocalLogin === true && vm.isUmbracoIdUser === true">
+        <div>
+            <p>Profile edit and password change, is not available when doing local development</p>
+        </div>
+    </div>
+    <div ng-if="vm.state === 'backoffice' && vm.isLocalLogin === false">
+        <div ng-if="vm.isUmbracoIdUser && vm.loadingUmbracoIdSetting === false">
+            <form ng-submit="vm.submitUmbIdProfileForm($event)"
+                  method="POST"
+                  action="{{vm.umbIdProfileFormEndpoint}}"
+                  name="umbIdProfileForm" id="umbIdProfileForm">
+                <umb-button type="submit"
+                            button-style="action"
+                            label-key="umbId_editProfile"
+                            icon="{{login.properties.Icon}}">
+                </umb-button>
+            </form>
+            <form ng-submit="vm.submitUmbIdPasswordForm($event)"
+                  method="POST"
+                  action="{{vm.umbIdPasswordFormEndpoint}}"
+                  name="umbIdPasswordForm" id="umbIdPasswordForm">
+                <umb-button type="submit"
+                            button-style="action"
+                            label-key="umbId_changePassword"
+                            icon="{{login.properties.Icon}}">
+                </umb-button>
+            </form>
+        </div>
+        <div ng-if="vm.isUmbracoIdUser === false && vm.loadingUmbracoIdSetting === false">
+            <p>Local users cant be linked to Umbraco Id</p>
+        </div>
+    </div>
+
+    <div ng-if="vm.state !== 'backoffice'">
+
+        <div ng-if="vm.state === 'logout'">
+          <p>
+            You have logged out of the Umbraco Backoffice.<br />
+            The session in Umbraco ID with this Umbraco Backoffice is still active.
+          </p>
+          <p>
+            We also recommend that you also log out of the session in Umbraco ID.
+          </p>
+          <p ng-if="vm.isLocalLogin === false" style="padding: 25px 0">
+            <a href="{{vm.umbIdSignOutEndpoint}}" style="background-color: #1b264f; padding: 1rem; border-radius: 10px; color: white">
+              Log out of Umbraco ID session
+            </a>
+          </p>
+          <p>
+            To return to the Umbraco Backoffice, <a href="/umbraco/" style="font-weight:bold">click here</a>.
+          </p>
+          <p>
+            To return to the Umbraco Cloud Portal, <a href="https://www.s1.umbraco.io/" style="font-weight:bold">click here</a>.
+          </p>
+        </div>
+
+        <div ng-if="vm.state !== 'logout'">
+          <umb-id-login-button login="login" errors="login.errors"></umb-id-login-button>
+        </div>
+
+    </div>
+</div>
